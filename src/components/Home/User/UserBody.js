@@ -20,7 +20,7 @@ export default function ClientBody() {
     try {
       const response = await axios.get(`${baseUrl}/api/project`);
       if (response?.data) {
-        setPost(response.data);
+        setPost(response?.data);
       }
     } catch (error) {
       toast.error(error.response.data.message);
@@ -43,7 +43,7 @@ export default function ClientBody() {
         setApplications(response.data)
       } 
     } catch (error) {
-      toast.error(error.response.data.message);
+      toast.error(error?.response.data.message);
     }
   };
 
