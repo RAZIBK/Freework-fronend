@@ -8,7 +8,8 @@ import { toast } from "react-hot-toast";
 
 const formikSchema = Yup.object({
   name: Yup.string().required("Name is required"),
-  email: Yup.string().required("Email is required"),
+  email: Yup.string().matches(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,"Invalid email format"
+  ).required("Email is required"),
   password: Yup.string().required("password is required"),
 });
 

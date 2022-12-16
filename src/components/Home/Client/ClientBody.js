@@ -55,9 +55,9 @@ export default function ClientBody() {
               <th scope="col" className="py-3 px-6">
                 Price
               </th>
-              <th scope="col" className="py-3 px-6">
+              {/* <th scope="col" className="py-3 px-6">
                 No of Applications
-              </th>
+              </th> */}
               <th scope="col" className="py-3 px-6">
                 who applied
               </th>
@@ -73,7 +73,7 @@ export default function ClientBody() {
                   </td>
                   <td className="py-4 px-6">{item?.technology}</td>
                   <td className="py-4 px-6">{item?.price}</td>
-                  <td className="py-4 px-6">0</td>
+                  {/* <td className="py-4 px-6">0</td> */}
                   <td className="py-4 px-6">
                   <Link
                         to={`/applications/${item?._id}`}
